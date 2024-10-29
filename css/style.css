@@ -1,0 +1,265 @@
+/*
+    HRvoid StyleSheet
+*/
+*{
+    margin:0;
+    padding: 0;
+    font-family:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji";
+    color:var(--gray);
+    text-decoration: none;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --light: #fbfdff;
+    --gray: #000000;
+    --dark: #343a40;
+}
+::-webkit-scrollbar
+{
+    background: var(--light);
+}
+::-webkit-scrollbar-thumb
+{
+    background: var(--gray);
+}
+::selection
+{
+    color:var(--dark);
+    background:var(--yellow);
+}
+::marker
+{
+    color:var(--blue);
+}
+#main
+{
+    display: grid;
+    grid-template-columns:3fr 1fr;
+    width:80vw;
+    margin:0 auto;
+}
+/*
+    layout css =============================
+*/
+body
+{
+    background: var(--light);
+}
+#container
+{
+    min-width: calc(80vw - 300px);
+}
+/*
+    aside css =============================
+*/
+#aside
+{
+    position: sticky;
+    top:0;
+    width: 300px;
+    height: 100vh;
+    padding:0;
+    background: var(--white);
+}
+#aside a
+{
+    display: block;
+    padding: 1rem 2rem;
+}
+#aside a:hover
+{
+    color:var(--blue);
+}
+.asideActive
+{
+    font-weight:bold;
+    color:var(--dark);
+    border-right:5px solid var(--blue);
+}
+/*
+    header css ==============================
+*/
+#header
+{
+    position: sticky;
+    top:0;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    background:var(--light);
+}
+#header #menu_button
+{
+    margin:0.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    color:var(--dark);
+    background: transparent;
+}
+#header #menu_button:hover
+{
+    opacity:0.5;
+}
+#header h2
+{
+    color:var(--dark);
+}
+/*
+    container-fluid =======================
+*/
+#container-fluid
+{
+    padding:2rem 1rem;
+}
+#container-fluid section
+{
+    padding-top:2rem
+}
+#container-fluid section :is(h1,h3,h4,h6)
+{
+    display:inline-block;
+    margin:2rem 0 ;
+    padding-left:1rem;
+    font-weight:normal;
+    border-left:1px solid var(--red);
+}
+#container-fluid section :is(h1):after
+{
+    content: ':';
+    color:var(--blue);
+}
+#container-fluid section :is(h5)
+{
+    display: inline-block;
+    color:var(--dark);
+    font-size:1rem;
+    padding:0 3px;
+}
+#container-fluid section p
+{
+    padding: 2rem 0;
+    line-height: 1.5rem;
+}
+#container-fluid section .console
+{
+    padding: 1rem;
+    line-height:2rem;
+    color:var(--dark);
+    background: #e3f2ff;
+    border:1px solid #b8daff;
+    border-radius:1rem;
+    overflow-y: scroll;
+}
+#container-fluid section .output
+{
+    margin:1rem 0;
+    padding:1rem;
+    color:var(--white);
+    background:var(--dark);
+    border-radius:10px;
+}
+#container-fluid .btn
+{
+    padding: 1rem;
+    font-size: 1rem;
+    background: cyan;
+}
+#container-fluid .btn:hover
+{
+    opacity: 0.5;
+}
+#container-fluid section ul,ol
+{
+    padding: 1rem 2rem;
+}
+#container-fluid section :is(ul,ol) li
+{
+    line-height: 2rem;
+}
+#container-fluid mark
+{
+    display:inline-block;
+}
+#container-fluid section img
+{
+    width: 100%;
+}
+/*
+    footer css =========================
+*/
+#footer
+{
+    padding: 2rem;
+    border-top:1px dotted var(--gray);
+}
+#footer a
+{
+    color:var(--blue);
+    display:inline-block;
+    font-weight:600;
+}
+/*
+    responsive css ======================
+*/
+@media screen and (max-width:970px)
+{
+    #main
+    {
+        width:90vw;
+        margin:0 auto;
+    }
+    #container
+    {
+        min-width: calc(90vw - 300px);
+    }
+}
+@media screen and (max-width:800px)
+{
+    #main
+    {
+        grid-template-columns: 1fr !important;
+        width:98vw;
+        margin:0 auto;
+    }
+    #aside
+    {
+        position: fixed;
+        z-index: 100%;
+        left:5%;
+        top: 5% !important;
+        width: 90%;
+        height: 90vh;
+        margin: 5vh auto;
+        overflow: auto;
+        box-shadow: 2px 2px 10px var(--dark);
+    }
+    /* .asideDisable
+    {
+        display: none;
+    } */
+}
+@media screen and (max-width:650px)
+{
+    #main
+    {
+        width:98vw;
+    }
+}
+
+/*
+    the end ---
+*/

@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<!--
+-   
+-   Developed | Designed by KARAN (4308/22)
+-   CopyRight by Time2code
+-   HTML ./index.html
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time2code</title>
+    <!--
+        ---------
+        | style |
+        ---------
+    -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <!--
+        ---------------------------------------------------------------
+        | main | mother container of all section and component
+        ---------------------------------------------------------------
+    -->
+    <main class="" id="main">
+        <!--
+            -----------------------
+            [ container component ] : contain inside header footer and container-fluid
+            -----------------------
+        -->
+        <div id="container">
+            <!--
+                ==================
+                [ header section ]
+                ==================
+            -->
+            <header id="header">
+
+                <h2> Time2code </h2>
+                
+                <button id="menu_button"> &#9776; </button>
+
+            </header>
+
+            <!--
+                -------------------
+                [ container fluid ] : collection insdie all section
+                -------------------
+            -->
+            <div id="container-fluid">
+            
+                <!--
+                    ( php basic ) =====
+                -->
+                <section id="basic">
+
+                    <h1> PHP Basic </h1>
+                    
+                    <p> PHP (Hypertext Preprocessor) is a popular server-side scripting language for web development. It is widely used for creating dynamic web pages and web applications. </p>
+                    
+                    <h1> Features of PHP </h1>
+                    
+                    <ul>
+                        <li> Simple and easy to learn. </li>
+                        <li> Open-source and free.</li>
+                        <li> Platform-independent.</li>
+                        <li> Supports various databases.</li>
+                        <li> Extensive community support.</li>
+                    </ul>
+                    
+                    <h1> Embedding PHP Code in Web Pages </h1>
+                    
+                    <p> PHP code can be embedded directly into HTML files to create dynamic web pages. PHP scripts are enclosed within special tags, typically <?php for the opening tag and ?> for the closing tag. Here's an example of embedding PHP code to display the current date and time: </p>
+                    
+<pre class="console">
+&#60;html&#62;
+&#60;head&#62;
+&#60;title&#62; how to embed php &#60;/title&#62;
+&#60;/head&#62;
+&#60;body&#62;
+        &#60;&#63;php
+            # add php in any where in .html either .php
+            echo " welcome in PHP ";
+        &#63;&#62;
+&#60;/body&#62;
+&#60;/html&#62;
+</pre>
+
+                    <div class="output"> welcome in PHP </div>
+
+                </section>
+                <!--
+                    ( vairable and tokens ) =====
+                -->
+                <section id="statement">
+                
+                    <h1> Statement in PHP </h1>
+
+                    <p> we have to method to print statement in phpt once <b>echo</b> other is <b> print </b> but main difference to each other <i> print return 1 </i> after write and echo return null secondary difference is echo faster than print. </p>
+
+<pre class="console">
+&#60;&#63;php
+    echo "i am faster and void return &#60;br&#62;";
+    print "i am return 1 after print";
+&#63;&#62;
+</pre>
+
+                    <div class="output"> i am faster and void return <br> i am return 1 after print </div>
+                
+                </section>
+                <!--
+                    ( vairable and tokens ) =====
+                -->
+                <section name="variable">
+
+                    <h1> Variable & Tokens </h1>
+
+                    <p> PHP code consists of various tokens, including keywords, identifiers, constants, strings, and operators. These tokens are the building blocks of PHP scripts. </p>
+
+                    <p> Variables in PHP are used to store data. They start with a dollar sign ($) followed by an identifier. PHP variables are case-sensitive. </p>
+
+                    <h4> PHP Scope </h4>
+
+                    <ul>
+                        <li> <b>Local scope:</b> Variables declared within a function. </li>
+                        <li> <b>Global scope:</b> Variables declared outside functions. </li>
+                        <li> <b>Static scope:</b> Variables within a function that retain their values between function calls. </li>
+                    </ul>
+<pre class="console">
+&#60;&#63;php
+    $n1 = 1;
+    $n2 = 2;
+    echo "sum of ${$n1} and ${n2} is ${$n1+$n2}";
+&#63;&#62;
+</pre>
+                     <div class="output">sum of 1 and 2 is 3</div>
+
+                </section>
+                <!--
+                    ( datatype section ) =====
+                -->
+                <section id="datatype">
+                
+                    <h1> Datatype </h1>
+
+                    <p> In PHP, data types specify the type of data that can be stored in a variable. PHP supports several data types, each designed for handling specific types of information. Here are some of the most common data types in PHP: </p>
+
+
+<pre class="console">
+&#60;&#63;php
+$number_data = 1;
+$float_data = 0.5;
+$boolean_data = true;
+$char_data = '@';
+$string_data = " write line in side ";
+$void_data = null;
+echo  "number {$number_data} float {$float_data} boolean {boolean_data} charactor {$char_data} string {$string_data} null {$void_data} ";
+&#63;&#62;
+</pre>
+                    <div class="output"> number 1 float 0.5 boolean tyre charactor @ string write line in side null undefined </div>                         
+                    
+                </section>
+                <!--
+                    ( constants section ) =====
+                -->
+                <section id="constant">
+                
+                    <h1> Constant </h1>
+
+                    <p> In PHP, a constant is a alu that cannot be changed once it is defined during a script's execution. Constatnt are typically used to store values that remain the same throughout the script and have specific, predefined purpose. we have to two way to define constant </p>
+
+                    <ul>
+                        <li> <b> const </b> it is keyword that we are use write before variable </li>
+                        <li> <b> define </b> it is function that inside we are pass constant variable and value </li>
+                    </ul>
+
+<pre class="console">
+&#60;&#63;php
+    define("PI",3.14159);
+    const $user = "KARANDevil";
+    echo "pi value is ".PI." name ".$user;
+&#63;&#62;
+</pre>
+                    <div class="output">pi value is 3.12159 name KARAN </div>
+                
+                </section>
+                <!--
+                    ( operation section ) =====
+                -->
+                <section id="operation">
+                
+                    <h1> Operation </h1>
+
+                    <p>  </p>
+
+                    <h3> calculater program using <h5>arithemetic operator</h5> and <h5>switch statement</h5> </h3>
+
+<pre class="console">
+&#60;&#63;php
+    # calculator.php : enter default number and calculate
+    $n1 = 4;
+    $n2 = 2;
+    $n = 0;
+    $choice = 3;
+    switch ($choice)
+    {
+        case 1 : $n = $n1 + $n2; break;
+        case 2 : $n = $n1 - $n2; break;
+        case 3 : $n = $n1 * $n2; break;
+        case 4 : $n = $n1 / $n2; break;
+        case 5 : $n = $n1 % $n2; break;
+        default : $n = "enter choice between [1 to 5]";
+    }
+    echo (" output : ".$n);
+&#63;&#62;
+</pre>
+                    <div class="output"> output : 8 </div>
+
+                    <h3> find even else odd between 100 number using <h5> for loop </h5> and <h5> if else statement </h5> </h3>
+
+<pre class="console">
+&#60;&#63;php
+    # find odd or even number between 0 to 100 number
+    $n = 100;
+    for ($i = 1; $i < $n; $i++)
+    {
+        if ($i % 2 == 0)
+        {
+            echo ("&#60;div&#60; number ".$i." is even &#60;/div&#60;");
+        }
+        else
+        {
+            echo ("&#60;div&#60; number ".$i." is odd &#60;/div&#60;");
+        }
+    }
+&#63;&#62;
+</pre>
+                    <div class="output"> number 1 is odd <br> number 2 is even <br> number 3 is odd <br> ...<br> number 100 is even  </div>
+                     
+
+                    <h3> factorial find program using <h5> dowhile loop </h5> and <h5> assignment operator </h5> </h3>
+
+<pre class="console">
+&#60;&#63;php
+    # factorial.php :
+    $n = 3;
+    $f = 1;
+    $i = 1;
+    do
+    {
+        $f = $i * $f;
+        $i++
+    }
+    while($i <= $n); 
+    echo ("factorial of ".$n." is ".$f);
+&#63;&#62;
+</pre>
+                    <div class="output"> factorial of 3 is 6 </div>
+
+
+                    <h3> find number is prime or not using <h5> while loop </h5> and <h5> if statement </h5> </h3>
+
+<pre class="console">
+&#60;&#63;php
+    # primeNumber.php : fnd the number is prime or not
+    $n = 11;
+    $is_prime =  true;
+    $i = 2;
+    while ($i < $n)
+    {
+        if ($n % $i == 0) $is_prime = false;
+        $i++;
+    }
+    if ($is_prime) echo(" prime "); else echo(" not prime ");
+&#63;&#62;
+</pre>
+                    <div class="output"> prime </div>
+                
+                </section>
+                <!--
+                    ( function section ) =====
+                -->
+                <section id="function">
+                
+                    <h1> Functions </h1>
+
+                    <p> A function is a block of code that perfoms a specific task or set of tasks.Functions are a fundamental part of PHP programming and help you organize your code, make it more modular, and enable you to reuse code segments. </p>
+
+                    <h3> Simple Function </h3>
+
+<pre class="console">
+&#60;&#63;php
+    # functions.php : function is set of code inside the named block
+	function destoryWorld()
+	{
+		echo ("&#60;div&#62; welcome reuse the code &#60;/div&#62;");
+	}
+	destoryWorld();
+	destoryWorld();
+&#63;&#62;
+</pre>
+                    <div class="output"> welcome reuse the code <br> welcome resuse the code </div>
+
+                    <h3> Parameter Function </h3>
+
+<pre class="console">
+&#60;&#63;php
+    # the function take argument at call time that called parameterfunction
+    function hello($name)
+    {
+        echo ("&#60;div&#62; welcome ".$name."&#60;/div&#62;");
+    }
+    hello("KARAN");
+    hello("PHPuser");
+&#63;&#62;
+</pre>
+                    <div class="output"> welcome KARAN <br> welcome PHPuser </div>
+
+                    <h3> Return Funtion </h3>
+
+<pre class="console">
+&#60;&#63;php
+    # a function that use return keyword to return value are called returnfunction
+    function plus($n1, $n2)
+    {
+        return ($n1 + $n2);
+    }
+	echo(" sum of number function return ".plus(1,3));
+	echo(" sum of number function return ".plus(5,3));
+&#63;&#62;
+</pre>
+                    <div class="output"> sum of number function return 4 <br> sum of number function return 8  </div>                
+                
+                    <h3> Arrow Function </h3>
+
+                </section>
+                <!--
+                    ( array section ) =====
+                -->
+                <section id="array">
+                
+                    <h1> Array </h1>
+
+                    <p> In php array is list of element.The keys of the indexed array are integers that start at 0. Typically, you use indexed arrays when you want to access the elements by their positions. </p>
+
+<pre class="console">
+&#60;&#63;php
+    # array list of element
+    $set = [9,2,11,400,20];
+    # call by index
+    echo " index1 ".$set[1]."&#60;br&#62;";
+    echo " index0 ".$set[0]."&#60;br&#62;";
+    echo " index4 ".$set[4]."&#60;br&#62;";
+&#63;&#62;
+</pre>
+                    <div class="output"> index1 2 <br> index0 9 <br> index4 20 </div>
+
+                    <h4> Indexed Array </h4>
+
+<pre class="console">
+&#60;&#63;php
+    $cartoon = array("ironman","spiderman","batman","superman");
+    foreach ($cartoon as $element)
+    {
+        echo "".$element."&#60;br&#62;";
+    }
+&#63;&#62;
+</pre>
+                    <div class="output"> ironman <br> spiderman <br> batman <br> superman </div>
+                
+                    <h4> The <h5>Associative</h5> Array </h4>
+
+<pre class="console">
+&#60;&#63;php
+$globe =
+[
+    'Japan' => 'Tokyo',
+    'France' => 'Paris',
+    'Germany' => 'Berlin'
+];
+foreach ($globe as $country => $capital)
+{
+    echo "".$country." = ".$capital."&#60;br&#62;";
+}
+&#63;&#62;
+</pre>
+                <div class="output"> Japan = Tokyo <br> France = Paris <br> Germany = Berlin <br>  </div>
+
+                <h4> The <h5>MultiDimensional</h5> Array  </h4>
+
+<pre class="console">
+&#60;&#63;php
+    $tasks = [
+        ['Learn PHP programming', 2],
+        ['Practice PHP', 2],
+        ['Work', 8],
+        ['Do exercise', 1],
+    ];
+    foreach ($tasks as $task) {
+        foreach ($task as $task_detail) {
+            echo "".$task_detail."&#60;br&#62;";
+        }
+    }
+&#63;&#62;
+</pre>
+
+                <div class="output"> Learn PHP programming<br> 2<br> Practice PHP<br> 2<br> Work<br> 8<br> Do exercise<br> 1 </div>
+
+                <h4> Array <h5>sort()</h5> or <h5>array_reverse()</h5> </h4>
+
+<pre class="console">
+&#60;&#63;php
+# sort() inbuild function to short array
+# print_r() print all array 
+$numbers = [9,2,11,400,20];
+print_r(sort($numbers));
+echo "&#60;br&#62;";
+print_r(array_reverse($numbers))
+&#63;&#62;
+</pre>
+                <div class="output">Array <br> (<br>[0] => 2<br>[1] => 9<br>[2] => 11<br>[3] => 20<br>[4] => 400<br>) <br> Array <br> (<br>[0] => 400<br>[1] => 20<br>[2] => 11<br>[3] => 9<br>[4] => 2<br>) </div>
+
+                <h4> Array function { <h5>current()</h5>|<h5>next()</h5>|<h5>prev()</h5>|<h5>end()</h5> }</h4>
+
+<pre class="console">
+&#60;&#63;php
+$a = Array(2,5,4,3,1);
+echo "&#60;div&#62;  current() element ".current($a)."&#60;/div&#62;";
+next($a);
+next($a);
+echo "&#60;div&#62;  after next() element ".current($a)."&#60;/div&#62;";
+prev($a);
+echo "&#60;div&#62;  after prev() ious element ".current($a)."&#60;/div&#62;";
+echo "&#60;div&#62;  end() element ".end($a)."&#60;/div&#62;";
+&#63;&#62;
+</pre>
+
+                <div class="output">current() element 2 <br> after next() element 4 <br> after pre() ious element 5 <br> end() element 1 </div>
+
+                <h4> Two <h5>array_combine()</h5> and  <h5>array_slice()</h5></h4>
+
+<pre class="console">
+&#60;&#63;php
+$a = Array(1,2,4);
+$b = Array(5,6);
+$c = array_combine($a,$b);
+foreach($c as $element) echo $element;
+echo "&#60;br&#62;";
+$d = array_slice($c,2);
+foreach($d as $element) echo $element;
+&#63;&#62;
+</pre>                
+                <div class="output">12456 <br>654 </div>
+
+                </section>
+                <!--
+                    ( string section ) =====
+                -->
+                <section id="string">
+                
+                    <h1> String </h1>
+
+                    <p> A string in PHP is a sequence of characters,like words or sentences. You can work with string to store and manipulate text, PHP offers various functions to perform tasks like finding text, changing text, and measuring the length of strings.Strings are a fundamental part of web development for things like displaying messages, processing forms, and working with data. </p>
+
+                    <h3> Declare string in PHP or find <h5> strlen()</h5>|<h5>strtoupper()</h5>|<h5>strtolower()</h5> </h3>
+
+<pre class="console">
+&#60;&#63;php
+$s = "Welcome PHP";
+echo strlen($s);
+echo strtoupper($s);
+echo strtolower($s);
+&#63;&#62;
+</pre>
+                    <div class="output"> 11WELCOME PHPwelcome php </div>
+
+                    <h3> How to string <h5>str_replace()</h5>|<h5>substr()</h5>|<h5>trim()</h5> </h3>
+
+<pre class="console">
+&#60;&#63;php
+$s = "Welcome PHP";
+echo str_replace("PHP","KARAN",$s);
+echo substr($s,3,4);
+echo trim($s);
+&#63;&#62;
+</pre>
+                    <div class="output"> Welcome KARANcomeWelcome PHP </div>
+
+                    <h3> Find <h5>strpos()</h5> and how to <h5>strrev()</h5> and <h5>str_repeat()</h5> </h3>
+
+<pre class="console">
+&#60;&#63;php
+$s = "Welcome PHP";
+echo strpos($s,"come");
+echo strrev($s);
+echo str_repeat($s,3);
+&#63;&#62;
+</pre>
+                    <div class="output"> 3PHP emocleWWelcome PHPWelcome PHPWelcome PHP </div>
+
+                </section>
+                <!--
+                    ( math section ) =====
+                -->
+                <section id="math">
+                
+                    <h1> Math </h1>
+
+                    <p> Math in PHP involves performing numberical calculations. You can use PHP for tasks like arithemetic functional and more. PHP provides functions for comman math operations, making it used for financial calulations, data processing, and much more in web development. </p>
+
+<pre class="console">
+&#60;&#63;php
+echo round(0.5)."&#60;br&#62;";
+echo ceil(3.5)."&#60;br&#62;";
+echo floor(3.5)."&#60;br&#62;";
+echo abs(0.5)."&#60;br&#62;";
+echo pow(2,3)."&#60;br&#62;";
+echo sqrt(16)."&#60;br&#62;";
+echo max(1,4,6)."&#60;br&#62;";
+echo min(1,3,2)."&#60;br&#62;";
+echo rand(1,10)."&#60;br&#62;";
+echo log(16,2)."&#60;br&#62;";
+echo pi()."&#60;br&#62;";
+&#63;&#62;
+</pre>
+                    <div class="output"> 1 <br> 4 <br> 3 <br> 0.5 <br> 8 <br> 4 <br> 6 <br> 1 <br> 1 <br> 4 <br> 3.1415926535898  </div>
+                
+                </section>
+                <!--
+                    ( cookies section ) =====
+                -->
+                <section id="cookies">
+                
+                    <h1> Cookies </h1>
+
+                    <p> In PHP, cookies are small pieces of data stored on a user's web browser. They are often used to remember information about user, like login status of user preferences. Cookies help websites provide personalized experience and keep track of user interactions. </p>
+
+                    <h3> [ <h5>login.php</h5> ] : onSubmit SETCOOKIE and goto welcome </h3>
+
+<pre class="console">
+&#60;!DOCTYPE html&#62;
+&#60;html lang="en"&#62;
+&#60;head&#62;
+    &#60;title&#62;cookies protocol&#60;/title&#62;
+&#60;/head&#62;
+&#60;body&#62;
+    &#60;form&#62;
+        &#60;div&#62;
+            &#60;label for="username"&#62; Enter Username : &#60;/label&#62;
+            &#60;input type="text" name="username" id="username"&#62;
+        &#60;/div&#62;
+        &#60;div&#62;
+            &#60;label for="password"&#62; Enter Password : &#60;/label&#62;
+            &#60;input type="password" name="password" id="password"&#62;
+        &#60;/div&#62;
+
+        &#60;div&#62;
+            &#60;input type="submit" value="Login" name="submit"&#62;
+        &#60;/div&#62;
+    &#60;/form&#62;
+    &#60;&#63;php
+        if (isset($_REQUEST['submit']))
+        {
+            setcookie("CODE",$_REQUEST['password'],time() + (60*60));
+
+            /*setcookie( string $name [, string $value = "" [, int $expires = 0 [, string $path = "" [, string $domain = "" [, bool $secure [, bool $httponly [, array $options = [] ]]]]]]])*/ 
+
+            header("location:welcome.php"); // redirect to welcome
+        }
+    &#63;&#62;
+&#60;/body&#62;
+&#60;/html&#62;
+</pre>
+                    <div class="output"><img src="data/cookie.jpg" alt=""></div>
+
+                    <h3> [ <h5>welcome.php</h5> ] : if COOKIE_NOT_FOUND goto Login else welcome </h3>
+
+<pre class="console">
+&#60;&#63;php
+    if ($_COOKIE['CODE'] != "open")
+    {
+        header("location:cookies.php");
+    }
+    else
+    {
+        echo " &#60;h1&#62; Welcome to Dashboard &#60;/h1&#62;";
+    }
+&#63;&#62;
+</pre>
+                <div class="output"><img src="data/welcome.jpg" alt=""></div>
+                
+                </section>
+                <!--
+                    ( session section ) =====
+                -->
+                <section id="session">
+                
+                    <h1> Sessions </h1>
+
+                    <p> A PHP session is a temporay storage for data that can be used across multiple pages on a website to remember user information. </p>
+
+                    <h3> The <h5>$_SESSION</h5> function <h5>session_start()</h5>,<h5>session_reset()</h5> and <h5>session_destroy()</h5> use. </h3>
+
+<pre class="console">
+&#60;?php
+    session_start();
+    if (isset($_REQUEST['reset'])) {
+        session_reset();
+    }
+    if (isset($_REQUEST['destory'])) {
+        session_destroy();
+        session_start();
+    }
+    if (isset($_REQUEST['username']))
+    {
+        $_SESSION['username'] = $_REQUEST['username'];
+    }
+    $username = isset($_SESSION['username'])? $_SESSION['username'] : 'MasterKARAN';
+?&#62;
+&#60;html lang="en"&#62;
+&#60;head&#62;
+    &#60;title&#62; KARANDevil &#60;/title&#62;
+&#60;/head&#62;
+&#60;body&#62;
+    &#60;h1&#62; Welcome, &#60;?php echo $username; ?&#62;! &#60;/h1&#62;   
+    &#60;form action="&#60;?php $_SERVER['PHP_SELF'] ?&#62;" method="post"&#62;
+        &#60;div&#62;
+            &#60;label for="username"&#62; Enter Username =  &#60;/label&#62;
+            &#60;input type="text" name="username" id="username"&#62;
+        &#60;/div&#62;
+        &#60;div&#62;
+            &#60;input type="submit" name="submit" value="Submit"&#62;
+            &#60;input type="submit" name="reset" value="Reset"&#62;
+            &#60;input type="submit" value="destory" id="destory"&#62;
+        &#60;/div&#62;
+    &#60;/form&#62;
+&#60;/body&#62;
+&#60;/html&#62;
+</pre>
+                    <div class="output"> <img src="data/session.jpg" alt=""></div>
+                
+                </section>
+                <!--
+                    ( form handling section ) =====
+                -->
+                <section id="form">
+                
+                    <h1> form </h1>
+
+                    <p> Form handling is gather and process user input by <b>url</b>. Every form data is fetch with url of web browser and php form handling work on it. PHP use supe vairable like { <b>$_GET[]</b> , <b>$_POST[]</b> , <b>$_REQUEST[]</b> } to fetch user input data on url by the help of <b>name</b> value. </p>
+
+                    <h3> Get Form field data using <h5>$_REQUEST[]</h5> and <h5>$_SERVER[]</h5>  </h3>
+
+<pre class="console">
+&#60;html lang="en"&#62;
+&#60;title&#62;get form values&#60;/title&#62;
+&#60;/head&#62;
+&#60;body&#62;
+    &#60;form action="&#60;?php $_SERVER['PHP_SELF'] ?&#62;" &#62;
+
+        &#60;div&#62;
+            &#60;label for="username"&#62; Enter Username : &#60;/label&#62;
+            &#60;input type="text" name="username" id="username"&#62;
+        &#60;/div&#62;
+        &#60;div&#62;
+            &#60;label for="number"&#62; Enter Number : &#60;/label&#62;
+            &#60;input type="tel" name="number" id="number"&#62;
+        &#60;/div&#62;
+        &#60;div&#62;
+            &#60;label for="mail"&#62; Enter Email-Id : &#60;/label&#62;
+            &#60;input type="email" name="email" id="mail"&#62;
+        &#60;/div&#62;
+        &#60;div&#62;
+            &#60;label for="password"&#62; Enter Password : &#60;/label&#62;
+            &#60;input type="password" name="password" id="password"&#62;
+        &#60;/div&#62;
+        &#60;div&#62;
+            &#60;input type="submit" value="Login" name="submit"&#62;
+        &#60;/div&#62;
+    &#60;/form&#62;
+    &#60;?php
+        if (isset($_REQUEST['submit']))
+        {
+            echo "&#60;div&#62;".$_REQUEST['username']."&#60;/div&#62;";
+            echo "&#60;div&#62;".$_REQUEST['number']."&#60;/div&#62;";
+            echo "&#60;div&#62;".$_REQUEST['email']."&#60;/div&#62;";
+            echo "&#60;div&#62;".$_REQUEST['password']."&#60;/div&#62;";
+        }
+    ?&#62;
+&#60;/body&#62;
+&#60;/html&#62;
+</pre>
+                    <div class="output"> <img src="data/form.jpg" alt=""> </div>
+
+                    <h3> Get Form checkbox data </h3>
+
+<pre class="console">
+&#60;html lang="en"&#62;
+&#60;head&#62;
+&#60;title&#62;get form values&#60;/title&#62;
+&#60;/head&#62;
+&#60;body&#62;
+    &#60;form action="&#60;?php $_SERVER['PHP_SELF']?&#62;"&#62;
+        &#60;label for=""&#62;
+            &#60;input type="checkbox" name="color[]" value="red"&#62; red
+        &#60;/label&#62;
+        &#60;label for=""&#62;
+            &#60;input type="checkbox" name="color[]" value="yellow"&#62; yellow
+        &#60;/label&#62;
+        &#60;label for=""&#62;
+            &#60;input type="checkbox" name="color[]" value="green"&#62; green
+        &#60;/label&#62;
+        &#60;label for=""&#62;
+            &#60;input type="checkbox" name="color[]" value="blue"&#62; blue
+        &#60;/label&#62;
+        &#60;div&#62;
+            &#60;input type="submit" value="Login" name="submit"&#62;
+        &#60;/div&#62;
+    &#60;/form&#62;
+    &#60;?php
+        if (isset($_REQUEST['submit']))
+        {
+            $name = $_GET['color'];
+
+            foreach ($name as $color)
+            { 
+                echo "&#60;div&#62;".$color."&#60;/div&#62;";
+            }
+        }
+    ?&#62;
+&#60;/body&#62;
+&#60;/html&#62;
+</pre>
+                    <div class="output"> <img src="data/chcekbox.jpg" alt=""> </div>
+                
+                </section>
+                <!--
+                    ( database connection section ) =====
+                -->
+                <section id="database">
+                
+                    <h1> Database Connection </h1>
+
+                    <p> PHP is widely famous script to connect database because it connection web to database is much simple to all </p>
+
+                    <ol>
+                        <li> Establise Connection </li>
+                        <li> Execute Query </li>
+                        <li> Close Connection </li>
+                    </ol>
+
+                    <h3> PHP Database <h5>mysqli_connect() mysqli_connect_errno() mysqli_connect_error()</h5> </h3>
+
+<pre class="console">
+&#60;&#63;php
+$connection = mysqli_connect("localhosts","root","","vip");
+/*
+    mysqli_connect() : function return connection true
+    take arguments :-
+        1 : hostname {x}
+        2 : username {x}
+        3 : password
+        4 : database
+*/ 
+if ($connection)
+{
+    echo (" connection successfully ");
+}
+else
+{
+    die (mysqli_connect_errno()." connection error : ".mysqli_connect_error());
+}
+&#63;&#62;
+</pre>
+                    <div class="output"> connection successfully </div>
+
+                    <h3> How to execute <h5>mysqli_query()</h5> or <h5>require()</h5> connection </h3>
+
+<pre class="console">
+&#60;&#63;php
+    require('connection.php');
+    /*
+        mysqli_query(); : function return response of mysqli 
+        take arguments :-
+            1 :  connection     {x}
+            2 :  query          {x}
+    */
+    $query = "insert into onam values(2)";
+    $result = mysqli_query($connection,$query);
+
+&#63;&#62;
+</pre>
+                    <div class="output"></div>
+
+                    <h3> PHP Connection <h5>include()</h5> and <h5>mysqli_close()</h5> </h3>
+<pre class="console">
+&#60;&#63;php
+    include('connection.php');
+    /*
+        mysqli_close : function return ture false of connection cut
+        take argument :-
+            1 : connection  {x}
+    */
+    if (mysqli_close($connection))
+    {
+        echo (" connection closed ");
+    } 
+&#63;&#62;
+</pre>
+                    <div class="output"> connection closed </div>
+                
+                </section>
+                <!--
+                    ( file handling section ) =====
+                -->
+                <section id="file">
+                
+                    <h1> File Handling </h1>
+
+                    <p> PHP file handling is the process of working with files in PHP, it involes operations like opening, reading, writing, appeneding and closing files. </p>
+
+                    <h3> File Handling in PHP to <h5>create  write append close</h5> file </h3>
+
+<pre class="console">
+&#60;&#63;php
+    // Open a file for writing (creates a new file if it doen't exist or truncates an existing file)
+    $file = fopen("example.txt","w");
+    if ($file) 
+    {
+        // Write some content to the file
+        fwrite($file,"if you are like follow me on github.com ");"
+        fclose($file);  // Close the file
+        $file = fopen("example.txt","a");   // Open the file for appending
+        if ($file) 
+        {
+            // Append more content to the file
+            fwrite($file," https://github.com/KARANDevil/");
+            fclose($file);  // Close the file
+            // Open the file for reading
+            $file = fopen("example.txt","r");
+            if ($file) 
+            {
+                while (!feof($file)) 
+                {
+                    echo fgets($file);  // Read and display the content of the file
+                }
+            }
+            fclose($file);  // Close the file
+        }
+        else
+        {
+            echo "Failed to open the file for reading.";
+        }
+    }
+    else
+    {
+        echo "Failed to open the file for writing.";
+    }
+?>
+&#63;&#62;
+</pre>
+                
+                </section>
+
+               
+
+                </section>
+
+            </div>
+            <!--
+                ==================
+                [ footer section ]
+                ==================
+            -->
+            <footer id="footer"> Time2code &copy; Designed | Developed by KARAN (4308/22) </a> </footer>
+
+        </div>
+
+        <!--
+            -------------------
+            [ aside component ] : side anchor menu
+            -------------------
+        -->
+        <aside id="aside">
+
+            <a href="#basic"> PHP Basic </a>
+            <a href="#statement"> Statement </a>
+            <a href="#variable"> Variable & Tokens </a>
+            <a href="#constant"> Constant </a>
+            <a href="#datatype"> Datatype </a>
+            <a href="#operation"> Opeartion </a>
+            <a href="#function"> Functions </a>
+            <a href="#array"> Array </a>
+            <a href="#string"> String </a>
+            <a href="#math"> Math </a>
+            <a href="#cookies"> Cookies </a>
+            <a href="#session"> Sessions </a>
+            <a href="#form"> Form Handling </a>
+            <a href="#database"> Database Connection </a>
+            <a href="#file"> File Handling </a>
+        
+            
+        </aside>
+
+    </main>
+    <!--
+        ----------
+        | script |
+        ----------
+    -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
